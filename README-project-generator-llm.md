@@ -34,6 +34,20 @@ It already includes:
 The current version is intentionally minimal so it is easy to understand and extend.
 
 ---
+## High-level work flow
+Webview Input
+   ↓
+specBuilder.ts  → creates ProjectSpec
+   ↓
+promptBuilder.ts → creates prompt (THIS FILE)
+   ↓
+provider (openai/dummy)
+   ↓
+LLM response
+   ↓
+parser.ts
+   ↓
+UI preview
 
 ## High-level architecture
 

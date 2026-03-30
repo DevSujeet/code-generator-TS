@@ -13,7 +13,8 @@ A VS Code extension scaffold that:
 - `openai`
 
 ## Configure OpenAI in VS Code settings
-
+- cmd + , to open vscode settings
+- search projectgenerator
 Set:
 - `projectGenerator.provider` = `openai`
 - `projectGenerator.openai.apiKey` = your API key
