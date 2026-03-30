@@ -1,0 +1,1 @@
+{"version":3,"file":"dummyProvider.js","sourceRoot":"","sources":["../../src/providers/dummyProvider.ts"],"names":[],"mappings":";;;AAAA,2CAA6D;AAK7D,MAAa,aAAa;IACxB,KAAK,CAAC,eAAe,CAAC,IAAiB,EAAE,OAAe;QACtD,OAAO,IAAA,oCAA2B,EAAC,IAAI,CAAC,CAAC;IAC3C,CAAC;CACF;AAJD,sCAIC"}

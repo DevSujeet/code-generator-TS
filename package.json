@@ -1,0 +1,56 @@
+{
+  "name": "project-generator-extension",
+  "displayName": "Project Generator Extension",
+  "description": "Generate starter backend projects from user input using an LLM provider",
+  "version": "0.0.2",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:projectGenerator.openGenerator"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "projectGenerator.openGenerator",
+        "title": "Project Generator: Open"
+      }
+    ],
+    "configuration": {
+      "title": "Project Generator",
+      "properties": {
+        "projectGenerator.provider": {
+          "type": "string",
+          "enum": ["dummy", "openai"],
+          "default": "dummy",
+          "description": "LLM provider to use for project generation."
+        },
+        "projectGenerator.openai.apiKey": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "OpenAI API key used when provider is set to `openai`."
+        },
+        "projectGenerator.openai.model": {
+          "type": "string",
+          "default": "gpt-5",
+          "description": "OpenAI model used for generation."
+        },
+        "projectGenerator.openai.baseUrl": {
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "description": "Base URL for OpenAI-compatible API."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4"
+  }
+}
